@@ -86,7 +86,7 @@ button:hover,
 
 /* calendar */
 .button.button-calendar {
-  color: #000000;
+  color: #ffffff;
   background-color: #e29706;
 }
 .button.button-calendar:hover,
@@ -563,7 +563,7 @@ button:hover,
 
 /* Spotify */
 .button.button-spotify {
-  color: #191414;
+  color: #ffffff;
   background-color: #1db954;
 }
 .button.button-spotify:hover,
