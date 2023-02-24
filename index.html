@@ -132,7 +132,7 @@
 				const nächsterTermin = new Date(termine.find(termin => new Date(termin) > jetzt));
 
 				// Zeigt den nächsten Termin auf der Website an
-				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' });
+				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
 				document.getElementById('next-event').textContent = `Die nächste Veranstaltung findet statt am ${nächsterTerminText}.`;
 			})
 			.catch(error => console.error(error));
