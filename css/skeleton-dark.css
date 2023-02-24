@@ -31,6 +31,10 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cls-1,.cls-2,.cls-3 {
+  fill: ##ff21ff;
+}
+
 .container {
   position: relative;
   width: 100%;
