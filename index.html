@@ -57,7 +57,7 @@
 
         <!-- Short Bio -->
         <p>Wir sind die AG QueErz, eine LGBT*IAQ+ Unigruppe für Freiberg. Wir möchten das queere Angebot erweitern und einen Anlaufpunkt für Studierende bieten.</p>
-	<p id="next-event"></p>
+	Der nächste Stammtisch in der alten Mensa findet statt am: <p id="next-event"></p>
         <!--
 
           ## Breaking down <a> attributes:
@@ -105,7 +105,7 @@
         
          <!-- Telegram -->
         <a class="button button-calendar" href="#" target="_blank" rel="noopener">
-            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo">Nächster Termin:</a>
+            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo">Nächster Termin:<p id="next-event"></p></a>
         <br>
         
         <!-- ungenutzte Tags in unused-file. -->
@@ -133,7 +133,7 @@
 
 				// Zeigt den nächsten Termin auf der Website an
 				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
-				document.getElementById('next-event').textContent = `Der nächste Stammtisch in der Alten Mensa ist am ${nächsterTerminText}.`;
+				document.getElementById('next-event').textContent = `${nächsterTerminText}`;
 			})
 			.catch(error => console.error(error));
 	</script>
