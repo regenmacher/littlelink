@@ -122,6 +122,9 @@ p {
   margin-top: 0;
 }
 
+p.next-event {
+  font-style: bold;
+}
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
