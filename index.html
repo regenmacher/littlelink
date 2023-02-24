@@ -105,7 +105,7 @@
         
          <!-- Telegram -->
         <a class="button button-calendar" href="#" target="_blank" rel="noopener">
-            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo">Nächster Termin:<p id="next-event"></p></a>
+            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo"><p id="next-event"></p></a>
         <br>
         
         <!-- ungenutzte Tags in unused-file. -->
@@ -132,7 +132,7 @@
 				const nächsterTermin = new Date(termine.find(termin => new Date(termin) > jetzt));
 
 				// Zeigt den nächsten Termin auf der Website an
-				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
+				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', {year: 'numeric', month: 'long', day: 'numeric'});
 				document.getElementById('next-event').textContent = `${nächsterTerminText}`;
 			})
 			.catch(error => console.error(error));
