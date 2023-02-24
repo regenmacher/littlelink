@@ -111,7 +111,7 @@
         <!-- ungenutzte Tags in unused-file. -->
         
         <p><a href="privacy.html">Privacy Policy</a> | Build your own by forking <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.</p>
-	      <p>Hallo <p id="next-event"></p></p>
+	      <p>Hallo <p id="next-event"></p>k  <p id="next-event2"></p></p>
       </div>
     </div>
   </div>
@@ -134,6 +134,7 @@
 				// Zeigt den nächsten Termin auf der Website an
 				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', {year: 'numeric', month: 'long', day: 'numeric'});
 				document.getElementById('next-event').textContent = `${nächsterTerminText}`;
+				document.getElementById('next-event2').textContent = `${nächsterTerminText}`;
 			})
 			.catch(error => console.error(error));
 	</script>
