@@ -105,7 +105,7 @@
         
          <!-- Telegram -->
         <a class="button button-calendar" href="#" target="_blank" rel="noopener">
-            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo">Nächster Termin: </a><p id="next-event"></p>
+            <img class="icon" src="images/icons/cal.svg" alt="Kalender Logo">Nächster Termin: <script>${nächsterTerminText}</script></a>
         <br>
         
         <!-- ungenutzte Tags in unused-file. -->
@@ -133,7 +133,7 @@
 
 				// Zeigt den nächsten Termin auf der Website an
 				const nächsterTerminText = nächsterTermin.toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
-				document.getElementById('next-event').textContent = `Die nächste Veranstaltung findet statt am ${nächsterTerminText}.`;
+				document.getElementById('next-event').textContent = `Der nächste Stammtisch in der Alten Mensa ist am ${nächsterTerminText}.`;
 			})
 			.catch(error => console.error(error));
 	</script>
