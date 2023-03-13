@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Termine eintragen</title>
+</head>
+<body>
+	<h1>Termine eintragen</h1>
+	<form method="POST" action="save.php">
+		<label for="title">Titel:</label>
+		<input type="text" id="title" name="title" required>
+		<br><br>
+		<label for="date">Datum:</label>
+		<input type="date" id="date" name="date" required>
+		<br><br>
+		<input type="submit" value="Speichern">
+	</form>
+
+	<h2>Termine</h2>
+	<?php 
+		$file = 'termine.txt'; 
+		if (file_exists($file)) {
+			$lines = file($file);
+			if ($lines !== false) {
+				echo "<ul>";
+				foreach ($lines as $line) {
+					echo "<li>" . htmlspecialchars($line) . "</li>";
+				}
+				echo "</ul>";
+			}
+		} 
+	?>
+</body>
+</html>
+<!--PHP-Code (speichert die eingegebenen Termine in einer txt-Datei):-->
+
+<?php
+	$title = $_POST['title'];
+	$date = $_POST['date'];
+	$line = "$title - $date\n";
+	$file = 'termine.txt';
+	file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
+	header("Location: index.php");
+	exit();
+?>
+
+
