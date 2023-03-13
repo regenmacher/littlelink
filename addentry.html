@@ -6,9 +6,6 @@
 <body>
 	<h1>Termine eintragen</h1>
 	<form method="POST" action="save.php">
-		<label for="title">Titel:</label>
-		<input type="text" id="title" name="title" required>
-		<br><br>
 		<label for="date">Datum:</label>
 		<input type="date" id="date" name="date" required>
 		<br><br>
@@ -17,7 +14,7 @@
 
 	<h2>Termine</h2>
 	<?php 
-		$file = 'termine.txt'; 
+		$file = './termine.txt'; 
 		if (file_exists($file)) {
 			$lines = file($file);
 			if ($lines !== false) {
@@ -37,7 +34,7 @@
 	$title = $_POST['title'];
 	$date = $_POST['date'];
 	$line = "$title - $date\n";
-	$file = 'termine.txt';
+	$file = './termine.txt';
 	file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
 	header("Location: index.php");
 	exit();
