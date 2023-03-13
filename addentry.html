@@ -30,9 +30,9 @@
 <!--PHP-Code (speichert die eingegebenen Termine in einer txt-Datei):-->
 
 <?php
-	$title = $_POST['title'];
+	
 	$date = $_POST['date'];
-	$line = "$title - $date\n";
+	$line = "$date\n";
 	$file = 'termine.txt';
 	file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
 	header("Location: index.php");
